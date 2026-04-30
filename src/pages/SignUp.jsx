@@ -1,6 +1,8 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
+import { AuthContext } from '../AuthContext/AuthContext'
+
 const SignUp = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
