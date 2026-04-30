@@ -13,7 +13,7 @@ export default function AuthProvider({ children }) {
             return { success: false, error: "User Already Exists" }
         }
         const newUser = { email, password }
-        user.push(newUser)
+        users.push(newUser)
         localStorage.setItem("users",JSON.stringify(users))
         localStorage.setItem("currentUserEmail", email)
         setUser({ email })

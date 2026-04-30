@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState,useContext } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../AuthContext/AuthContext'
 
 const SignUp = () => {
+  const{signUp} = useContext(AuthContext)
+  const [error,setError] = useState(null)
+  const navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   function onSubmit(data) {
-    alert("Yayyyy!")
+    const result = signUp(data.email, data.password)
+    if(success.result){
+      navigate('/')
+    } else {
+      {success.error}
+    }
   }
   return (
     <header className='px-10'>
