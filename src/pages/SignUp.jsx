@@ -8,16 +8,19 @@ const SignUp = () => {
   const{signUp} = useContext(AuthContext)
   const [error,setError] = useState(null)
   const navigate = useNavigate()
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
 
   function onSubmit(data) {
     const result = signUp(data.email, data.password)
-    if(success.result){
-      navigate('/')
+
+    if(result.success){
+      navigate("/")
     } else {
-      {success.error}
+      setError(result.error)
     }
+
   }
+
   return (
     <header className='px-10'>
       <div className='p-10 border rounded-2xl max-w-md w-full mx-auto'>
