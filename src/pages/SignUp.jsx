@@ -15,6 +15,7 @@ const SignUp = () => {
 
     if(result.success){
       navigate("/")
+      reset()
     } else {
       setError(result.error)
     }
@@ -28,6 +29,7 @@ const SignUp = () => {
           <div className='mb-5 space-y-1'>
             <h1 className='text-2xl font-semibold'>Create Account</h1>
             <h3 className='text-md'>Join JobSearch to find your Dream Role</h3>
+            {error && <p className='text-center text-red-400 text-md mt-7'>{error}</p>}
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)}>
