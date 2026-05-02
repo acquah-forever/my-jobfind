@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { ChevronDown, House, TableOfContents, Handshake, Image, Menu, X } from 'lucide-react'
-
+import { motion, AnimatePresence } from 'motion/react'
 import { AuthContext } from '../AuthContext/AuthContext'
 
 import useClick from '../hooks/useClick'
@@ -10,6 +10,17 @@ const NavBar = () => {
   const { user, logOut } = useContext(AuthContext)
 
   const [isOpen, toggle, close, close2] = useClick()
+
+
+  let parent = {
+    hidden: { opacity: 0, y: -70 },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.25, duration: 0.7 } }
+  }
+
+  let children = {
+    hidden: { opacity: 0, y: -70 },
+    visible: { opacity: 1, y: 0 }
+  }
 
   return (
     <header className='py-5 mx-5'>
@@ -22,9 +33,11 @@ const NavBar = () => {
           <Link to='./'>Home</Link>
           <Link>Jobs</Link>
           <Link>About</Link>
-          <button className='cursor-pointer flex justify-center items-center'
-            onClick={toggle}>
-            More <ChevronDown className='mt-1' size={18} /></button>
+        
+            <button className='cursor-pointer flex justify-center items-center'
+              onClick={toggle}>
+              More <ChevronDown className='mt-1' size={18} /></button>
+        
         </div>
 
         {user ? (<button className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' onClick={logOut}>LogOut</button>) : (
@@ -48,9 +61,10 @@ const NavBar = () => {
 
 
       {isOpen && (
-        <nav className='px-5'>
+        <AnimatePresence>
+        <motion.nav variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='px-5'>
           <section className='px-5 hidden md:grid md:grid-cols-2 lg:grid-cols-3 justify-items-center mt-3'>
-            <div className='space-y-4'>
+            <motion.div variants={children} className='space-y-4'>
               <label className='text-md font-bold tracking-tighter' htmlFor="resources">Resources</label>
               <div className='mt-3 flex space-x-4'>
                 <House size={20} />
@@ -75,9 +89,9 @@ const NavBar = () => {
                   <h2 className='text-sm'>We are here to help.</h2>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className='space-y-4'>
+            <motion.div variants={children} className='space-y-4'>
               <label className='text-md font-bold tracking-tighter' htmlFor="insights">Latest Insights</label>
               <div className='mt-3 flex space-x-3'>
                 <div className='p-10 w-50 bg-gray-400 rounded-xl'>
@@ -101,10 +115,10 @@ const NavBar = () => {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
 
 
-            <div className='space-y-4'>
+            <motion.div variants={children} className='space-y-4'>
               <label className='text-md font-bold tracking-tighter' htmlFor="contact">Contact</label>
               <div>
                 <h2 className='text-sm'>Get In touch with us.</h2>
@@ -120,9 +134,11 @@ const NavBar = () => {
                 <label htmlFor="mobile">Telephone</label>
                 <span className='font-semibold'>+44 (0)7931 55 8921</span>
               </div>
-            </div>
+            </motion.div>
           </section>
-        </nav>
+        </motion.nav>
+          
+        </AnimatePresence>
 
       )}
 
