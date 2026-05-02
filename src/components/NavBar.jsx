@@ -55,7 +55,7 @@ const NavBar = () => {
         )}
 
 
-        <button className='flex md:hidden'
+        <button className='flex md:hidden cursor-pointer'
           onClick={toggle}>{isOpen ? <X /> : <Menu />}</button>
       </nav>
 
@@ -94,26 +94,26 @@ const NavBar = () => {
               <motion.div variants={children} className='space-y-4'>
                 <label className='text-md font-bold tracking-tighter' htmlFor="insights">Latest Insights</label>
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{scale:1.05}} className='p-10 w-50 bg-gray-400 rounded-xl'>
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='p-10 w-50 bg-gray-400 rounded-xl'>
                     <Image size={40} />
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Finding Your Next Role</h1>
                     <h2 className='text-sm'>Tips for landing positions.</h2>
-                    <motion.div variants={children} whileHover={{scale:1.05}}>
+                    <motion.div variants={children} whileHover={{ scale: 1.05 }}>
                       <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
                 </div>
 
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{scale:1.05}} className='w-50 p-10 bg-gray-400 rounded-xl'>
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl'>
                     <Image size={40} />
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
                     <h2 className='text-sm'>What companies are hiring.</h2>
-                    <motion.div variants={children} whileHover={{scale:1.05}}>
+                    <motion.div variants={children} whileHover={{ scale: 1.05 }}>
                       <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
@@ -129,13 +129,13 @@ const NavBar = () => {
 
                 <div className=' text-sm flex flex-col'>
                   <label htmlFor="email">Email</label>
-                  <motion.span variants={children} whileHover={{scale:1.05}} className='font-semibold'>nothtekayjay@icloud.com</motion.span>
+                  <motion.span variants={children} whileHover={{ scale: 1.05 }} className='font-semibold'>nothtekayjay@icloud.com</motion.span>
                 </div>
 
 
                 <div className=' text-sm flex flex-col'>
                   <label htmlFor="mobile">Telephone</label>
-                  <motion.span variants={children} whileHover={{scale:1.05}} className='font-semibold'>+44 (0)7931 55 8921</motion.span>
+                  <motion.span variants={children} whileHover={{ scale: 1.05 }} className='font-semibold'>+44 (0)7931 55 8921</motion.span>
                 </div>
               </motion.div>
             </section>
@@ -144,27 +144,27 @@ const NavBar = () => {
         )}
       </AnimatePresence>
 
-      {
-        isOpen && (
-          <div>
-            <div className='mt-7 mb-4 flex flex-col md:hidden text-lg md:text-xl space-y-2'>
-              <Link onClick={close2}>Home</Link>
-              <Link onClick={close2}>Jobs</Link>
-              <Link onClick={close2}>About</Link>
-              <Link onClick={close2}>Contact</Link>
-            </div>
-            <div className='text-center flex flex-col md:hidden space-y-2 w-30'>
-              <div className='bg-sky-600 border px-4 py-2 text-lg md:text-xl'>
-                <NavLink onClick={close2}>Sign Up</NavLink>
-              </div>
+      <AnimatePresence>
+        {
+          isOpen && (
+            <motion.div variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -50 }} >
+              <motion.div variants={children} className='mt-7 mb-4 flex flex-col md:hidden text-lg md:text-xl space-y-2'>
+                <Link onClick={close2}>Home</Link>
+                <Link onClick={close2}>Jobs</Link>
+                <Link onClick={close2}>About</Link>
+                <Link onClick={close2}>Contact</Link>
+              </motion.div>
+              <motion.div variants={children} className='text-center flex flex-col md:hidden space-y-2 w-full'>
+                
+                <NavLink className='bg-sky-600 border px-4 py-2 text-lg md:text-xl' to='/signup' onClick={close2}>Sign Up</NavLink>
 
-              <div className='bg-slate-800 border px-4 py-2 text-lg md:text-xl'>
-                <NavLink onClick={close2}>Log In</NavLink>
-              </div>
-            </div>
-          </div>
-        )
-      }
+                <NavLink className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' to='/login' onClick={close2}>Log In</NavLink>
+
+              </motion.div>
+            </motion.div>
+          )
+        }
+      </AnimatePresence>
 
 
     </header >
