@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { ChevronDown, House, TableOfContents, Handshake, Image, Menu, X } from 'lucide-react'
+
+import { AuthContext } from '../AuthContext/AuthContext'
 
 import useClick from '../hooks/useClick'
 
 const NavBar = () => {
-  
+  const { user, logOut } = useContext(AuthContext)
+
   const [isOpen, toggle, close, close2] = useClick()
 
   return (
@@ -23,15 +26,21 @@ const NavBar = () => {
             onClick={toggle}>
             More <ChevronDown className='mt-1' size={18} /></button>
         </div>
-        <div className='hidden md:flex justify-center items-center space-x-3'>
-          <div className='bg-sky-600 border px-4 py-2 text-lg md:text-xl'>
-            <NavLink to='./signup'>Sign Up</NavLink>
+
+        {user ? (<button className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' onClick={logOut}>LogOut</button>) : (
+
+          <div className='hidden md:flex justify-center items-center space-x-3'>
+            <div className='bg-sky-600 border px-4 py-2 text-lg md:text-xl'>
+              <NavLink to='./signup'>Sign Up</NavLink>
+            </div>
+
+            <div className='bg-slate-800 border px-4 py-2 text-lg md:text-xl'>
+              <NavLink to='./login'>Log In</NavLink>
+            </div>
           </div>
 
-          <div className='bg-slate-800 border px-4 py-2 text-lg md:text-xl'>
-            <NavLink to='./login'>Log In</NavLink>
-          </div>
-        </div>
+        )}
+
 
         <button className='flex md:hidden'
           onClick={toggle}>{isOpen ? <X /> : <Menu />}</button>
@@ -46,7 +55,7 @@ const NavBar = () => {
               <div className='mt-3 flex space-x-4'>
                 <House size={20} />
                 <div>
-                  <NavLink className='text-sm font-semibold underline'onClick={close}>Blog</NavLink>
+                  <NavLink className='text-sm font-semibold underline' onClick={close}>Blog</NavLink>
                   <h2 className='text-sm'>Read Industry Insights.</h2>
                 </div>
               </div>
@@ -54,7 +63,7 @@ const NavBar = () => {
               <div className='mt-2 flex space-x-4'>
                 <TableOfContents size={20} />
                 <div>
-                  <Link className='text-sm font-semibold underline'onClick={close}>FAQ</Link>
+                  <Link className='text-sm font-semibold underline' onClick={close}>FAQ</Link>
                   <h2 className='text-sm'>Common Questions Asked.</h2>
                 </div>
               </div>
@@ -62,7 +71,7 @@ const NavBar = () => {
               <div className='mt-2 flex space-x-4'>
                 <Handshake />
                 <div>
-                  <NavLink className='text-sm font-semibold underline'onClick={close}>Support</NavLink>
+                  <NavLink className='text-sm font-semibold underline' onClick={close}>Support</NavLink>
                   <h2 className='text-sm'>We are here to help.</h2>
                 </div>
               </div>
@@ -77,7 +86,7 @@ const NavBar = () => {
                 <div>
                   <h1 className='text-sm font-semibold'>Finding Your Next Role</h1>
                   <h2 className='text-sm'>Tips for landing positions.</h2>
-                  <NavLink className='text-sm underline'onClick={close}>Read More</NavLink>
+                  <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
                 </div>
               </div>
 
@@ -88,7 +97,7 @@ const NavBar = () => {
                 <div>
                   <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
                   <h2 className='text-sm'>What companies are hiring.</h2>
-                  <NavLink className='text-sm underline'onClick={close}>Read More</NavLink>
+                  <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
                 </div>
               </div>
 

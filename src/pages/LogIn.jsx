@@ -6,7 +6,7 @@ import { AuthContext } from '../AuthContext/AuthContext'
 
 const LogIn = () => {
   const { logIn } = useContext(AuthContext)
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const [error, setError] = useState(null)
   const navigate = useNavigate()
 
@@ -15,6 +15,8 @@ const LogIn = () => {
 
     if (result.success) {
       navigate('/')
+      reset()
+      
     } else {
       setError(result.error)
     }
