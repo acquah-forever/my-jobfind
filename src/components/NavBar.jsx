@@ -107,15 +107,15 @@ const NavBar = () => {
                 </div>
 
                 <div className='mt-3 flex space-x-3'>
-                  <div className='w-50 p-10 bg-gray-400 rounded-xl'>
+                  <motion.div variants={children} whileHover={{scale:1.05}} className='w-50 p-10 bg-gray-400 rounded-xl'>
                     <Image size={40} />
-                  </div>
+                  </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
                     <h2 className='text-sm'>What companies are hiring.</h2>
-                    <div>
+                    <motion.div variants={children} whileHover={{scale:1.05}}>
                       <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
 
@@ -129,13 +129,13 @@ const NavBar = () => {
 
                 <div className=' text-sm flex flex-col'>
                   <label htmlFor="email">Email</label>
-                  <span className='font-semibold'>nothtekayjay@icloud.com</span>
+                  <motion.span variants={children} whileHover={{scale:1.05}} className='font-semibold'>nothtekayjay@icloud.com</motion.span>
                 </div>
 
 
                 <div className=' text-sm flex flex-col'>
                   <label htmlFor="mobile">Telephone</label>
-                  <span className='font-semibold'>+44 (0)7931 55 8921</span>
+                  <motion.span variants={children} whileHover={{scale:1.05}} className='font-semibold'>+44 (0)7931 55 8921</motion.span>
                 </div>
               </motion.div>
             </section>
