@@ -13,7 +13,7 @@ export default function AuthProvider({ children }) {
             return { success: false, error: "User Already Exists" }
         }
         const newUser = { email, password }
-        user.push(newUser)
+        users.push(newUser)
         localStorage.setItem("users",JSON.stringify(users))
         localStorage.setItem("currentUserEmail", email)
         setUser({ email })
@@ -22,8 +22,8 @@ export default function AuthProvider({ children }) {
     }
 
     function logIn(email, password) {
-        const users = JSON.parse(localStorage.getItem("email") || "[]")
-        const user = user.find((u) => u.email === email && u.password === password)
+        const users = JSON.parse(localStorage.getItem("users") || "[]")
+        const user = users.find((u) => u.email === email && u.password === password)
         if (!user) {
             return { success: false, error: "Invalid email or password" }
         }

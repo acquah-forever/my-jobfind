@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { useState,useContext } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../AuthContext/AuthContext'
 
 const SignUp = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const{signUp} = useContext(AuthContext)
+  const [error,setError] = useState(null)
+  const navigate = useNavigate()
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
 
   function onSubmit(data) {
-    alert("Yayyyy!")
+    const result = signUp(data.email, data.password)
+
+    if(result.success){
+      navigate("/")
+      reset()
+    } else {
+      setError(result.error)
+    }
+
   }
+
   return (
-    <header className='px-10'>
+    <header className='px-10 mt-30'>
       <div className='p-10 border rounded-2xl max-w-md w-full mx-auto'>
         <div className='grid grid-cols-1'>
           <div className='mb-5 space-y-1'>
             <h1 className='text-2xl font-semibold'>Create Account</h1>
             <h3 className='text-md'>Join JobSearch to find your Dream Role</h3>
+            {error && <p className='text-center text-red-400 text-md mt-7'>{error}</p>}
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)}>
