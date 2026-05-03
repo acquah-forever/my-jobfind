@@ -19,7 +19,7 @@ const Reviews = ({ review }) => {
             <motion.p variants={children} className='mb-4 text-sm sm:text-base font-semibold'>{review.review}</motion.p>
 
             <div className='flex  items-center space-x-3'>
-                <img className='rounded-full w-15 h-15 object-center object-cover' src={review.image} alt="headshot" />
+                <img className='rounded-full w-15 h-15 object-center object-cover' src={review.image} alt={review.name} />
                 <div className='mt-7'>
                     <motion.p variants={children} className=' text-sm sm:text-base font-semibold'>{review.name}</motion.p>
                     <motion.h1 variants={children} className='text-sm  mb-10'>{review.position}</motion.h1>

@@ -16,7 +16,7 @@ const features = [
     {id: 3,
         title: "Highlights",
         details: "Handpicked jobs worth your attention",
-        moreinfo: "We create the best opprtunities so you dont your watse time on poor fits.",
+        moreinfo: "We create the best opprtunities so you don't your watse time on poor fits.",
         cta: "Discover"
     }
 ]

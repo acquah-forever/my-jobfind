@@ -63,7 +63,7 @@ const LogIn = () => {
               <button className='p-3 mt-4 rounded-lg bg-linear-to-br from-green-400 to-green-800 cursor-pointer w-full' type='submit'>Sign In</button>
 
               <div className='text-center mt-7'>
-                <h1>Dont have an account? &nbsp;<NavLink to='/signup' className='cursor-pointer text-sky-500 font-semibold underline'>Sign Up</NavLink></h1>
+                <h1>Don,t have an account? &nbsp;<NavLink to='/signup' className='cursor-pointer text-sky-500 font-semibold underline'>Sign Up</NavLink></h1>
               </div>
 
             </form>
