@@ -16,7 +16,7 @@ const features = ({ feature }) => {
   }
   
   return (
-    <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{once: false, amount:0.7}} className='border rounded-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 w-full max-w-sm sm:max-w-md lg:max-w-lg'>
+    <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{once: true, amount:0.7}} className='border rounded-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 w-full max-w-sm sm:max-w-md lg:max-w-lg'>
       <motion.p variants={children} className='mb-4 text-sm sm:text-base font-semibold'>{feature.title}</motion.p>
       <motion.h1 variants={children} className='text-3xl font-bold mb-10'>{feature.details}</motion.h1>
       <motion.p variants={children} className='text-md mb-10'>{feature.moreinfo}</motion.p>

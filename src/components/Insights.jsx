@@ -16,7 +16,7 @@ const Insights = ({ insight }) => {
     }
 
     return (
-        <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.7 }} className='border rounded-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 w-full max-w-sm sm:max-w-md lg:max-w-lg'>
+        <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }} className='border rounded-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 w-full max-w-sm sm:max-w-md lg:max-w-lg'>
             <div className='flex space-x-3'>
             <motion.p variants={children} className='mb-4 text-sm sm:text-base font-semibold'>{insight.pill}</motion.p>
             <motion.p variants={children} className='mb-4 text-sm sm:text-base font-semibold'>{insight.time}</motion.p>
