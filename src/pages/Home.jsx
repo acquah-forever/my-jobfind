@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div>
-        <h1 className='font-bold text-4xl text-center'>What makes us different</h1>
-        <h1 className='font-semibold text-center text-2xl'>We built the platform to cut through the noise and get you hired</h1>
+      <h1 className='font-bold text-4xl text-center'>What makes us different</h1>
+      <h1 className='font-semibold text-center text-2xl'>We built the platform to cut through the noise and get you hired</h1>
+      <div className='mt-10 px-10 grid grid-cols-3'>
         {features.map((feature) => (<Features
           feature={feature} key={feature.id}
         />))}

@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'lucide-react'
 
-const features = () => {
+const features = ({feature}) => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-
-      
+    <div>
+        <p>{feature.title}</p>
+        <h1>{feature.details}</h1>
+        <h2>{feature.moreinfo}</h2>
+        <button>{feature.cta}</button>
     </div>
   )
 }
