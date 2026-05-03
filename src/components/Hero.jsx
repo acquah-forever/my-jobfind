@@ -24,15 +24,20 @@ const Hero = () => {
                 </div>
                 <motion.h1 variants={children} className='text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold'>Finding Your Dream <br /> <span className='bg-linear-to-tr from-emerald-400  to-sky-400 text-transparent bg-clip-text'>Software Engineering</span><br /><span>Role Today</span></motion.h1>
                 <motion.h3 variants={children} className='text-center text-xl sm:text-2xl md:text-3xl'>Search through the latest opportunities in software engineering. <br /> Get hired fast with positions updated daily</motion.h3>
+                <div className='flex justify-center space-x-5'>
                 <motion.div variants={children} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.8 }} transition={{ type: spring, stiffness: 120, damping: 7 }} className='flex justify-center items-center'>
                     <button className='cursor-pointer bg-linear-to-br from-green-500 to-green-700 px-10 py-4 rounded text-lg sm:text-2xl font-semibold'
                     >Search</button>
-                    &nbsp;
-                    &nbsp; 
-                    <button className='cursor-pointer bg-linear-to-br from-green-500 to-green-700 px-10 py-4 rounded text-lg sm:text-2xl font-semibold'
+
+                </motion.div>
+                <motion.div variants={children} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.8 }} transition={{ type: spring, stiffness: 120, damping: 7 }} className='flex justify-center items-center'>
+
+                    <button className='cursor-pointer text-slate-800 bg-linear-to-tr from-emerald-700  to-white px-10 py-4 rounded text-lg sm:text-2xl font-semibold'
                     >Browse</button>
 
                 </motion.div>
+
+                </div>
             </div>
         </motion.header>
     )
