@@ -10,7 +10,7 @@ import AuthProvider from './AuthContext/AuthContext'
 const App = () => {
   return (
     <AuthProvider>
-      <div className='bg-slate-700 min-h-screen text-white'>
+      <div className=' bg-slate-900 min-h-screen text-white'>
         <div className='container mx-auto'>
           <NavBar />
           <Routes>

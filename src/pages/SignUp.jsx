@@ -1,6 +1,6 @@
 import React, { useState,useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../AuthContext/AuthContext'
 
@@ -23,7 +23,7 @@ const SignUp = () => {
   }
 
   return (
-    <header className='px-10 mt-30'>
+    <header id='signup' className='px-10 mt-30'>
       <div className='p-10 border rounded-2xl max-w-md w-full mx-auto'>
         <div className='grid grid-cols-1'>
           <div className='mb-5 space-y-1'>
@@ -68,7 +68,7 @@ const SignUp = () => {
             <button className='p-3 mt-4 rounded-lg bg-linear-to-br from-green-400 to-green-800 cursor-pointer w-full' type='submit'>Create Account</button>
 
             <div className='text-center mt-7'>
-              <h1>Already have an account? &nbsp;<span className='cursor-pointer text-sky-500 font-semibold underline'>Log In</span></h1>
+              <h1>Already have an account? &nbsp;<NavLink to='/login' className='cursor-pointer text-sky-500 font-semibold underline'>Log In</NavLink></h1>
             </div>
 
           </form>
