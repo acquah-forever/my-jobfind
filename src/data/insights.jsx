@@ -3,7 +3,7 @@ const insights = [
         id:1,
         pill: "career",
         time: "3 min read",
-        title: "How to ace your technical interview",
+        title: "How to ace your technical presentation and interview",
         moreinfo: "Preparation beats talent when the moment arrives.",
         cta: "Read more"
 
@@ -20,8 +20,12 @@ const insights = [
         id:3,
         pill: "Salary",
         time: "5 min read",
-        title: "What engineers really earn in 2026",
-        moreinfo: "Numbers dont lie about market value",
+        title: "What software engineers really earn in 2026",
+        moreinfo: "Numbers dont lie about market value of software engineers.",
         cta: "Read more"
     }
 ]
+
+export function getInsights(){
+    return insights
+}

@@ -14,6 +14,7 @@ const features = ({ feature }) => {
     hidden: { opacity: 0, y: -70 },
     visible: { opacity: 1, y: 0 }
   }
+  
   return (
     <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{once: false, amount:0.7}} className='border rounded-2xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 w-full max-w-sm sm:max-w-md lg:max-w-lg'>
       <motion.p variants={children} className='mb-4 text-sm sm:text-base font-semibold'>{feature.title}</motion.p>
