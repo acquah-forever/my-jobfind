@@ -13,7 +13,7 @@ const insights = [
         pill: "trends",
         time: "4 min read",
         title: "Remote work is reshaping software engineering",
-        moreinfo: "The best talent talent now works from anywhere",
+        moreinfo: "The best talent talent now works from anywhere.",
         cta: "Read More"
     },
     {
