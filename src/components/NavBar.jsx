@@ -43,11 +43,11 @@ const NavBar = () => {
         {user ? (<button className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' onClick={logOut}>LogOut</button>) : (
 
           <div className='hidden md:flex justify-center items-center space-x-3'>
-            <div className='bg-sky-600 border px-4 py-2 text-lg md:text-xl'>
+            <div className=' text-lg md:text-xl'>
               <NavLink to='./signup'>Sign Up</NavLink>
             </div>
 
-            <div className='bg-slate-800 border px-4 py-2 text-lg md:text-xl'>
+            <div className='bg-linear-to-br text-black from-emerald-400 font-semibold to-green-400 rounded-xl border px-4 py-2 text-lg md:text-xl'>
               <NavLink to='./login'>Log In</NavLink>
             </div>
           </div>
