@@ -15,7 +15,7 @@ let children = {
 
 const Hero = () => {
     return (
-        <motion.header variants={parent} initial="hidden" animate="visible" className='min-h-screen px-10  flex flex-col justify-center items-center'>
+        <motion.header variants={parent} initial="hidden" animate="visible" viewport={{once: true, amount:0.5}} className='min-h-screen px-10  flex flex-col justify-center items-center'>
             <div className='space-y-7 md:space-y-10'>
                 <div className='flex justify-center -tems-center'>
                     <button className='flex justify-center items-center space-x-1 border px-5 py-2 rounded-full bg-emerald-300/25'>
