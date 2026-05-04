@@ -13,7 +13,7 @@ const insights = [
         pill: "trends",
         time: "4 min read",
         title: "Remote work is reshaping software engineering",
-        moreinfo: "The best talent talent now works from anywhere.",
+        moreinfo: "The best talent now works from anywhere.",
         cta: "Read More"
     },
     {
@@ -21,7 +21,7 @@ const insights = [
         pill: "Salary",
         time: "5 min read",
         title: "What software engineers really earn in 2026",
-        moreinfo: "Numbers dont lie about market value of software engineers.",
+        moreinfo: "Numbers don't lie about market value of software engineers.",
         cta: "Read more"
     }
 ]
