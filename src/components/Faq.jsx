@@ -43,6 +43,53 @@ const Faq = () => {
                 </div>
             )}
 
+            <div className='flex items-center space-x-10'>
+                <h1>Is there a cost to use this ?</h1>
+                <button onClick={() => handleClick(3)}>
+                    {open === 3 ? <ChevronUp /> : <ChevronDown />}
+                </button>
+            </div>
+
+            {open === 3 && (
+                <div>
+                    <h1>This is free for job seekers. Browse, search and apply without paying anything. We make
+                        monet from employers, not from you
+                    </h1>
+                </div>
+            )}
+
+            <div className='flex items-center space-x-10'>
+                <h1>How do you curate jobs?</h1>
+                <button onClick={() => handleClick(4)}>
+                    {open === 4 ? <ChevronUp /> : <ChevronDown />}
+                </button>
+            </div>
+
+            {open === 4 && (
+                <div>
+                    <h1>We review every position to ensure quality. No spam, no dead ends, no companies with bad
+                        reputations. We show you positions from places worth your time.
+                    </h1>
+                </div>
+            )}
+
+            <div className='flex items-center space-x-10'>
+                <h1>Can I set job alerts ?</h1>
+                <button onClick={() => handleClick(5)}>
+                    {open === 5 ? <ChevronUp /> : <ChevronDown />}
+                </button>
+            </div>
+
+            {open === 5 && (
+                <div>
+                    <h1>Not yet, but its coming soon. For now, check back daily or use our search to find roles matching your
+                        criteria. New listins arrive consistently.
+                    </h1>
+                </div>
+            )}
+
+
+
 
 
         </section>
