@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Insights from '../components/Insights'
 import Reviews from '../components/Reviews'
+import Faq from '../components/Faq'
 import { motion } from 'motion/react'
 
 import { getFeatures } from '../data/features'
@@ -59,6 +60,10 @@ const Home = () => {
         {reviews.map((review) => (<Reviews
           review={review} key={review.id}
         />))}
+      </div>
+
+      <div>
+        <Faq />
       </div>
 
     </div>
