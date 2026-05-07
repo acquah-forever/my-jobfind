@@ -62,7 +62,7 @@ const Home = () => {
         />))}
       </div>
 
-      <div>
+      <div className='px-7 mt-15'>
         <Faq />
       </div>
 
