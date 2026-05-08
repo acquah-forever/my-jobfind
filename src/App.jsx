@@ -19,7 +19,9 @@ const App = () => {
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<LogIn />} />
           </Routes>
+          <div className='flex flex-col justify center items-center'>
           <Footer />
+          </div>
         </div>
       </div>
     </AuthProvider>
