@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { motion } from 'motion/react'
+import { motion, spring } from 'motion/react'
 
 const Faq = () => {
 
@@ -114,13 +114,13 @@ const Faq = () => {
                 )}
             </motion.div>
 
-            <div className='mt-10 space-y-3 text-center'>
-                <h1 className='text-3xl font-semibold'>Need more Help ?</h1>
-                <p className='text-xl font-semibold'>Reach out to us directly with your questions</p>
-                <div className='mt-7'>
-                    <button className='cursor-pointer bg-linear-to-br  from-emerald-400  to-sky-400 p-4 text-black'>Contact</button>
-                </div>
-            </div>
+            <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }} className='mt-10 space-y-3 text-center'>
+                <motion.h1 variants={children} className='text-3xl font-semibold'>Need more Help ?</motion.h1>
+                <motion.p variants={children} className='text-xl font-semibold'>Reach out to us directly with your questions</motion.p>
+                <motion.div variants={children} whileHover={{ scale:1.08 }} whileTap={{ scale: 0.8 }}  transition={{type:spring, stiffness: 120, damping: 7 }} className='mt-7'>
+                    <button  className='cursor-pointer bg-linear-to-br  from-emerald-400  to-sky-400 p-4 text-black rounded-md'>Contact</button>
+                </motion.div>
+            </motion.div>
         </motion.section>
     )
 }

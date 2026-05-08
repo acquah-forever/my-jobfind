@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import LogIn from './pages/LogIn'
@@ -17,8 +18,8 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<LogIn />} />
-
           </Routes>
+          <Footer />
         </div>
       </div>
     </AuthProvider>
