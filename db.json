@@ -1,0 +1,1020 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "title": "Frontend Developer",
+            "company": "NovaTech Solutions",
+            "location": "Remote",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Junior",
+            "salary": "$60,000 - $80,000",
+            "postedDate": "2026-05-09",
+            "industry": "Software Development",
+            "skills": [
+                "React",
+                "JavaScript",
+                "Tailwind CSS",
+                "HTML",
+                "CSS",
+                "Git"
+            ],
+            "tags": [
+                "frontend",
+                "react",
+                "remote",
+                "entry-level"
+            ],
+            "description": "We are seeking a Frontend Developer passionate about building modern and responsive user interfaces for web applications.",
+            "requirements": [
+                "1+ years of frontend experience",
+                "Strong understanding of React",
+                "Good understanding of responsive design",
+                "Knowledge of REST APIs"
+            ],
+            "responsibilities": [
+                "Build reusable UI components",
+                "Collaborate with designers",
+                "Improve application performance",
+                "Maintain code quality"
+            ],
+            "benefits": [
+                "Remote work",
+                "Flexible working hours",
+                "Paid learning resources"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 4
+        },
+        {
+            "id": 2,
+            "title": "Backend Developer",
+            "company": "CloudBridge Inc",
+            "location": "Accra, Ghana",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$85,000 - $110,000",
+            "postedDate": "2026-05-08",
+            "industry": "Cloud Infrastructure",
+            "skills": [
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "PostgreSQL",
+                "REST APIs"
+            ],
+            "tags": [
+                "backend",
+                "nodejs",
+                "api",
+                "hybrid"
+            ],
+            "description": "Join our backend engineering team to design scalable APIs and secure backend systems.",
+            "requirements": [
+                "3+ years backend experience",
+                "Knowledge of databases",
+                "Experience with authentication systems"
+            ],
+            "responsibilities": [
+                "Build scalable APIs",
+                "Optimize databases",
+                "Maintain server security"
+            ],
+            "benefits": [
+                "Health insurance",
+                "Hybrid work",
+                "Career growth"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 3,
+            "title": "Full Stack Developer",
+            "company": "PixelForge",
+            "location": "New York, USA",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$100,000 - $130,000",
+            "postedDate": "2026-05-09",
+            "industry": "FinTech",
+            "skills": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Express",
+                "TypeScript"
+            ],
+            "tags": [
+                "mern",
+                "fullstack",
+                "typescript",
+                "hybrid"
+            ],
+            "description": "Build scalable frontend and backend applications using modern JavaScript technologies.",
+            "requirements": [
+                "Experience with MERN stack",
+                "Strong debugging skills",
+                "Understanding of authentication systems"
+            ],
+            "responsibilities": [
+                "Develop frontend interfaces",
+                "Build backend APIs",
+                "Collaborate with cross-functional teams"
+            ],
+            "benefits": [
+                "Performance bonuses",
+                "Hybrid work environment",
+                "Paid vacations"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 3
+        },
+        {
+            "id": 4,
+            "title": "Senior Frontend Engineer",
+            "company": "Visionary Labs",
+            "location": "London, UK",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Senior",
+            "salary": "$130,000 - $160,000",
+            "postedDate": "2026-05-07",
+            "industry": "AI Solutions",
+            "skills": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "GraphQL",
+                "Jest"
+            ],
+            "tags": [
+                "senior",
+                "frontend",
+                "react",
+                "nextjs"
+            ],
+            "description": "Lead frontend architecture and mentor junior developers while building enterprise-level interfaces.",
+            "requirements": [
+                "5+ years frontend experience",
+                "Advanced React and TypeScript skills",
+                "Leadership experience"
+            ],
+            "responsibilities": [
+                "Lead frontend development",
+                "Architect scalable applications",
+                "Conduct code reviews"
+            ],
+            "benefits": [
+                "Remote-first culture",
+                "Stock options",
+                "Learning budget"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 1
+        },
+        {
+            "id": 5,
+            "title": "Senior Backend Engineer",
+            "company": "DataSphere",
+            "location": "Berlin, Germany",
+            "employmentType": "Full-time",
+            "workMode": "Onsite",
+            "experienceLevel": "Senior",
+            "salary": "$140,000 - $175,000",
+            "postedDate": "2026-05-08",
+            "industry": "Enterprise Software",
+            "skills": [
+                "Node.js",
+                "Go",
+                "Microservices",
+                "Docker",
+                "AWS"
+            ],
+            "tags": [
+                "senior",
+                "backend",
+                "microservices",
+                "aws"
+            ],
+            "description": "We are looking for a Senior Backend Engineer to design highly scalable distributed systems.",
+            "requirements": [
+                "5+ years backend engineering experience",
+                "Experience with cloud platforms",
+                "Knowledge of distributed systems"
+            ],
+            "responsibilities": [
+                "Design backend architecture",
+                "Optimize APIs",
+                "Mentor junior engineers"
+            ],
+            "benefits": [
+                "Relocation support",
+                "Annual bonuses",
+                "Private healthcare"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 6,
+            "title": "Project Manager",
+            "company": "AgileCore Systems",
+            "location": "Toronto, Canada",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$95,000 - $120,000",
+            "postedDate": "2026-05-09",
+            "industry": "IT Services",
+            "skills": [
+                "Project Management",
+                "Agile",
+                "Scrum",
+                "Jira",
+                "Leadership"
+            ],
+            "tags": [
+                "management",
+                "agile",
+                "scrum",
+                "jira"
+            ],
+            "description": "Manage software development projects while coordinating teams and stakeholders.",
+            "requirements": [
+                "3+ years project management experience",
+                "Agile certification preferred",
+                "Excellent communication skills"
+            ],
+            "responsibilities": [
+                "Manage project timelines",
+                "Coordinate teams",
+                "Track deliverables"
+            ],
+            "benefits": [
+                "Hybrid work",
+                "Career development",
+                "Paid certifications"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": false,
+            "vacancies": 1
+        },
+        {
+            "id": 7,
+            "title": "SCRUM Master",
+            "company": "SprintFlow Tech",
+            "location": "Amsterdam, Netherlands",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Mid-Level",
+            "salary": "$90,000 - $115,000",
+            "postedDate": "2026-05-06",
+            "industry": "Software Consulting",
+            "skills": [
+                "Scrum",
+                "Agile",
+                "Jira",
+                "Team Leadership"
+            ],
+            "tags": [
+                "scrum",
+                "agile",
+                "remote",
+                "leadership"
+            ],
+            "description": "Help software teams adopt Agile methodologies and improve development productivity.",
+            "requirements": [
+                "Certified Scrum Master preferred",
+                "Agile team management experience"
+            ],
+            "responsibilities": [
+                "Facilitate sprint planning",
+                "Remove team blockers",
+                "Improve Agile processes"
+            ],
+            "benefits": [
+                "Remote work",
+                "Paid workshops",
+                "Flexible schedules"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 8,
+            "title": "DevOps Engineer",
+            "company": "SkyNet Systems",
+            "location": "San Francisco, USA",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Senior",
+            "salary": "$125,000 - $155,000",
+            "postedDate": "2026-05-07",
+            "industry": "Cloud Computing",
+            "skills": [
+                "Docker",
+                "Kubernetes",
+                "AWS",
+                "Terraform",
+                "CI/CD"
+            ],
+            "tags": [
+                "devops",
+                "cloud",
+                "aws",
+                "kubernetes"
+            ],
+            "description": "Automate infrastructure and streamline cloud deployments for enterprise applications.",
+            "requirements": [
+                "Strong AWS experience",
+                "CI/CD pipeline management",
+                "Linux administration"
+            ],
+            "responsibilities": [
+                "Manage cloud infrastructure",
+                "Automate deployments",
+                "Maintain system uptime"
+            ],
+            "benefits": [
+                "Stock options",
+                "Remote flexibility",
+                "Tech allowance"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 9,
+            "title": "Database Analyst",
+            "company": "InsightWare",
+            "location": "Johannesburg, South Africa",
+            "employmentType": "Full-time",
+            "workMode": "Onsite",
+            "experienceLevel": "Mid-Level",
+            "salary": "$80,000 - $105,000",
+            "postedDate": "2026-05-05",
+            "industry": "Data Analytics",
+            "skills": [
+                "SQL",
+                "PostgreSQL",
+                "Database Optimization",
+                "Data Modeling"
+            ],
+            "tags": [
+                "database",
+                "sql",
+                "analytics",
+                "postgresql"
+            ],
+            "description": "Analyze and optimize company databases while ensuring high availability and performance.",
+            "requirements": [
+                "Strong SQL knowledge",
+                "Database optimization experience",
+                "Analytical thinking"
+            ],
+            "responsibilities": [
+                "Maintain databases",
+                "Optimize queries",
+                "Generate reports"
+            ],
+            "benefits": [
+                "Health insurance",
+                "Paid leave",
+                "Professional development"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": false,
+            "vacancies": 1
+        },
+        {
+            "id": 10,
+            "title": "Android Developer",
+            "company": "AppSphere",
+            "location": "Remote",
+            "employmentType": "Contract",
+            "workMode": "Remote",
+            "experienceLevel": "Mid-Level",
+            "salary": "$75,000 - $98,000",
+            "postedDate": "2026-05-08",
+            "industry": "Mobile Development",
+            "skills": [
+                "Kotlin",
+                "Java",
+                "Android SDK",
+                "Firebase"
+            ],
+            "tags": [
+                "android",
+                "mobile",
+                "kotlin",
+                "firebase"
+            ],
+            "description": "Develop and maintain high-performance Android applications for global users.",
+            "requirements": [
+                "Experience with Android SDK",
+                "Knowledge of Firebase",
+                "Strong debugging skills"
+            ],
+            "responsibilities": [
+                "Build Android applications",
+                "Fix performance issues",
+                "Collaborate with UI designers"
+            ],
+            "benefits": [
+                "Remote contract",
+                "Flexible hours",
+                "Performance bonuses"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 3
+        },
+        {
+            "id": 11,
+            "title": "AI Engineer",
+            "company": "DeepVision AI",
+            "location": "Toronto, Canada",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Senior",
+            "salary": "$145,000 - $185,000",
+            "postedDate": "2026-05-08",
+            "industry": "Artificial Intelligence",
+            "skills": [
+                "Python",
+                "TensorFlow",
+                "PyTorch",
+                "Machine Learning",
+                "LLMs"
+            ],
+            "tags": [
+                "ai",
+                "machine-learning",
+                "llm",
+                "python"
+            ],
+            "description": "Build intelligent systems and train advanced machine learning models for enterprise applications.",
+            "requirements": [
+                "Strong Python skills",
+                "Deep learning experience",
+                "NLP knowledge"
+            ],
+            "responsibilities": [
+                "Train AI models",
+                "Deploy ML systems",
+                "Optimize model performance"
+            ],
+            "benefits": [
+                "Research budget",
+                "Stock options",
+                "Flexible work setup"
+            ],
+            "companyLogo": "https://via.placeholder.com/150",
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 12,
+            "title": "UI/UX Designer",
+            "company": "CreativePixels",
+            "location": "Cape Town, South Africa",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Junior",
+            "salary": "$65,000 - $85,000",
+            "postedDate": "2026-05-07",
+            "industry": "Design",
+            "skills": [
+                "Figma",
+                "Adobe XD",
+                "Wireframing"
+            ],
+            "tags": [
+                "design",
+                "uiux"
+            ],
+            "description": "Design user-friendly interfaces and improve user experiences for web and mobile platforms.",
+            "requirements": [
+                "Experience with Figma",
+                "Strong UI/UX portfolio"
+            ],
+            "responsibilities": [
+                "Create wireframes",
+                "Design interfaces",
+                "Collaborate with developers"
+            ],
+            "benefits": [
+                "Flexible hours",
+                "Healthcare",
+                "Paid vacations"
+            ],
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 13,
+            "title": "Cybersecurity Engineer",
+            "company": "SecureNet",
+            "location": "Washington DC, USA",
+            "employmentType": "Full-time",
+            "workMode": "Onsite",
+            "experienceLevel": "Senior",
+            "salary": "$135,000 - $170,000",
+            "postedDate": "2026-05-06",
+            "industry": "Cybersecurity",
+            "skills": [
+                "Penetration Testing",
+                "SIEM",
+                "Network Security"
+            ],
+            "tags": [
+                "security",
+                "cybersecurity"
+            ],
+            "description": "Protect enterprise systems and monitor security vulnerabilities.",
+            "requirements": [
+                "Security certifications preferred",
+                "Experience with penetration testing"
+            ],
+            "responsibilities": [
+                "Monitor threats",
+                "Conduct security audits",
+                "Implement security protocols"
+            ],
+            "benefits": [
+                "Stock options",
+                "Bonuses",
+                "Healthcare"
+            ],
+            "featured": true,
+            "vacancies": 1
+        },
+        {
+            "id": 14,
+            "title": "Cloud Engineer",
+            "company": "Nimbus Cloud",
+            "location": "Remote",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Mid-Level",
+            "salary": "$115,000 - $145,000",
+            "postedDate": "2026-05-05",
+            "industry": "Cloud Computing",
+            "skills": [
+                "AWS",
+                "Azure",
+                "Terraform"
+            ],
+            "tags": [
+                "cloud",
+                "aws"
+            ],
+            "description": "Develop and maintain cloud infrastructure solutions.",
+            "requirements": [
+                "Experience with AWS or Azure",
+                "Infrastructure as Code knowledge"
+            ],
+            "responsibilities": [
+                "Deploy cloud services",
+                "Monitor infrastructure",
+                "Optimize cloud costs"
+            ],
+            "benefits": [
+                "Remote work",
+                "Learning budget",
+                "Health insurance"
+            ],
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 15,
+            "title": "Machine Learning Engineer",
+            "company": "DeepVision AI",
+            "location": "Toronto, Canada",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Senior",
+            "salary": "$145,000 - $180,000",
+            "postedDate": "2026-05-09",
+            "industry": "Artificial Intelligence",
+            "skills": [
+                "Python",
+                "TensorFlow",
+                "PyTorch"
+            ],
+            "tags": [
+                "ai",
+                "machine-learning"
+            ],
+            "description": "Develop machine learning models for enterprise AI systems.",
+            "requirements": [
+                "Strong Python experience",
+                "Knowledge of deep learning frameworks"
+            ],
+            "responsibilities": [
+                "Train ML models",
+                "Deploy AI services",
+                "Optimize model performance"
+            ],
+            "benefits": [
+                "Research budget",
+                "Stock options",
+                "Flexible work"
+            ],
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 16,
+            "title": "Data Scientist",
+            "company": "InsightAI",
+            "location": "Boston, USA",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$120,000 - $145,000",
+            "postedDate": "2026-05-04",
+            "industry": "Data Science",
+            "skills": [
+                "Python",
+                "Pandas",
+                "SQL",
+                "Machine Learning"
+            ],
+            "tags": [
+                "data-science",
+                "analytics"
+            ],
+            "description": "Analyze data and develop predictive analytics systems.",
+            "requirements": [
+                "Strong analytical skills",
+                "Python and SQL experience"
+            ],
+            "responsibilities": [
+                "Analyze datasets",
+                "Build prediction models",
+                "Present findings"
+            ],
+            "benefits": [
+                "Flexible schedule",
+                "Healthcare",
+                "Bonuses"
+            ],
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 17,
+            "title": "QA Engineer",
+            "company": "QualityFirst",
+            "location": "Remote",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Junior",
+            "salary": "$70,000 - $90,000",
+            "postedDate": "2026-05-07",
+            "industry": "Software Testing",
+            "skills": [
+                "Selenium",
+                "Cypress",
+                "Automation Testing"
+            ],
+            "tags": [
+                "qa",
+                "testing"
+            ],
+            "description": "Ensure software quality through manual and automated testing.",
+            "requirements": [
+                "Testing experience",
+                "Automation framework knowledge"
+            ],
+            "responsibilities": [
+                "Write test cases",
+                "Perform regression testing",
+                "Report bugs"
+            ],
+            "benefits": [
+                "Remote flexibility",
+                "Training programs",
+                "Paid leave"
+            ],
+            "featured": false,
+            "vacancies": 4
+        },
+        {
+            "id": 18,
+            "title": "Technical Support Engineer",
+            "company": "HelpDesk Pro",
+            "location": "Accra, Ghana",
+            "employmentType": "Full-time",
+            "workMode": "Onsite",
+            "experienceLevel": "Junior",
+            "salary": "$45,000 - $60,000",
+            "postedDate": "2026-05-06",
+            "industry": "IT Support",
+            "skills": [
+                "Troubleshooting",
+                "Networking",
+                "Customer Support"
+            ],
+            "tags": [
+                "support",
+                "it"
+            ],
+            "description": "Provide technical assistance and troubleshoot IT-related issues.",
+            "requirements": [
+                "Good communication skills",
+                "Networking knowledge"
+            ],
+            "responsibilities": [
+                "Resolve technical issues",
+                "Support customers",
+                "Document solutions"
+            ],
+            "benefits": [
+                "Paid training",
+                "Health insurance",
+                "Career growth"
+            ],
+            "featured": false,
+            "vacancies": 5
+        },
+        {
+            "id": 19,
+            "title": "Blockchain Developer",
+            "company": "ChainLabs",
+            "location": "Singapore",
+            "employmentType": "Contract",
+            "workMode": "Remote",
+            "experienceLevel": "Senior",
+            "salary": "$150,000 - $190,000",
+            "postedDate": "2026-05-05",
+            "industry": "Blockchain",
+            "skills": [
+                "Solidity",
+                "Ethereum",
+                "Smart Contracts"
+            ],
+            "tags": [
+                "blockchain",
+                "web3"
+            ],
+            "description": "Develop decentralized applications and blockchain infrastructure.",
+            "requirements": [
+                "Solidity experience",
+                "Understanding of smart contracts"
+            ],
+            "responsibilities": [
+                "Build dApps",
+                "Write smart contracts",
+                "Audit blockchain systems"
+            ],
+            "benefits": [
+                "Remote work",
+                "Token incentives",
+                "Flexible schedule"
+            ],
+            "featured": true,
+            "vacancies": 1
+        },
+        {
+            "id": 20,
+            "title": "Game Developer",
+            "company": "PixelPlay Studios",
+            "location": "Tokyo, Japan",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$95,000 - $125,000",
+            "postedDate": "2026-05-04",
+            "industry": "Gaming",
+            "skills": [
+                "Unity",
+                "C#",
+                "Game Physics"
+            ],
+            "tags": [
+                "gaming",
+                "unity"
+            ],
+            "description": "Develop engaging and high-performance gaming experiences.",
+            "requirements": [
+                "Unity experience",
+                "Strong C# knowledge"
+            ],
+            "responsibilities": [
+                "Develop gameplay systems",
+                "Fix game bugs",
+                "Optimize game performance"
+            ],
+            "benefits": [
+                "Gaming perks",
+                "Bonuses",
+                "Flexible work"
+            ],
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 21,
+            "title": "Software Architect",
+            "company": "EnterpriseX",
+            "location": "Zurich, Switzerland",
+            "employmentType": "Full-time",
+            "workMode": "Onsite",
+            "experienceLevel": "Senior",
+            "salary": "$170,000 - $220,000",
+            "postedDate": "2026-05-03",
+            "industry": "Enterprise Solutions",
+            "skills": [
+                "System Design",
+                "Microservices",
+                "AWS"
+            ],
+            "tags": [
+                "architecture",
+                "enterprise"
+            ],
+            "description": "Design scalable enterprise-level software systems.",
+            "requirements": [
+                "Architecture experience",
+                "Cloud infrastructure knowledge"
+            ],
+            "responsibilities": [
+                "Design systems",
+                "Lead engineering teams",
+                "Review architecture decisions"
+            ],
+            "benefits": [
+                "Executive bonuses",
+                "Healthcare",
+                "Relocation package"
+            ],
+            "featured": true,
+            "vacancies": 1
+        },
+        {
+            "id": 22,
+            "title": "Site Reliability Engineer",
+            "company": "Reliant Systems",
+            "location": "Remote",
+            "employmentType": "Full-time",
+            "workMode": "Remote",
+            "experienceLevel": "Senior",
+            "salary": "$135,000 - $165,000",
+            "postedDate": "2026-05-08",
+            "industry": "Infrastructure",
+            "skills": [
+                "Linux",
+                "Kubernetes",
+                "Monitoring"
+            ],
+            "tags": [
+                "sre",
+                "devops"
+            ],
+            "description": "Maintain highly available systems and monitor infrastructure performance.",
+            "requirements": [
+                "Linux administration experience",
+                "Monitoring tools knowledge"
+            ],
+            "responsibilities": [
+                "Improve reliability",
+                "Automate infrastructure",
+                "Monitor uptime"
+            ],
+            "benefits": [
+                "Remote setup",
+                "Bonuses",
+                "Healthcare"
+            ],
+            "featured": true,
+            "vacancies": 2
+        },
+        {
+            "id": 23,
+            "title": "Product Designer",
+            "company": "Innovate Studio",
+            "location": "Paris, France",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$85,000 - $110,000",
+            "postedDate": "2026-05-06",
+            "industry": "Product Design",
+            "skills": [
+                "Figma",
+                "Design Systems",
+                "Prototyping"
+            ],
+            "tags": [
+                "product-design",
+                "uiux"
+            ],
+            "description": "Design innovative digital products and experiences.",
+            "requirements": [
+                "Strong portfolio",
+                "Experience with design systems"
+            ],
+            "responsibilities": [
+                "Prototype interfaces",
+                "Conduct user research",
+                "Collaborate with developers"
+            ],
+            "benefits": [
+                "Hybrid work",
+                "Design workshops",
+                "Paid vacations"
+            ],
+            "featured": false,
+            "vacancies": 2
+        },
+        {
+            "id": 24,
+            "title": "React Native Developer",
+            "company": "MobileFusion",
+            "location": "Remote",
+            "employmentType": "Contract",
+            "workMode": "Remote",
+            "experienceLevel": "Mid-Level",
+            "salary": "$90,000 - $115,000",
+            "postedDate": "2026-05-07",
+            "industry": "Mobile Development",
+            "skills": [
+                "React Native",
+                "Expo",
+                "Firebase"
+            ],
+            "tags": [
+                "mobile",
+                "react-native"
+            ],
+            "description": "Develop cross-platform mobile applications using React Native.",
+            "requirements": [
+                "React Native experience",
+                "Firebase knowledge"
+            ],
+            "responsibilities": [
+                "Build mobile interfaces",
+                "Integrate APIs",
+                "Optimize app performance"
+            ],
+            "benefits": [
+                "Remote flexibility",
+                "Bonuses",
+                "Learning budget"
+            ],
+            "featured": true,
+            "vacancies": 3
+        },
+        {
+            "id": 25,
+            "title": "Business Intelligence Analyst",
+            "company": "DataMetrics",
+            "location": "Nairobi, Kenya",
+            "employmentType": "Full-time",
+            "workMode": "Hybrid",
+            "experienceLevel": "Mid-Level",
+            "salary": "$78,000 - $102,000",
+            "postedDate": "2026-05-09",
+            "industry": "Business Intelligence",
+            "skills": [
+                "Power BI",
+                "SQL",
+                "Excel"
+            ],
+            "tags": [
+                "bi",
+                "analytics"
+            ],
+            "description": "Analyze business data and create insightful dashboards.",
+            "requirements": [
+                "Power BI experience",
+                "Strong SQL knowledge"
+            ],
+            "responsibilities": [
+                "Build dashboards",
+                "Generate reports",
+                "Analyze company data"
+            ],
+            "benefits": [
+                "Healthcare",
+                "Hybrid work",
+                "Career growth"
+            ],
+            "featured": false,
+            "vacancies": 2
+        }
+    ]
+}

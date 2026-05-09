@@ -7,10 +7,14 @@ import LogIn from './pages/LogIn'
 import Search from './pages/Search'
 
 import { Routes, Route } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import AuthProvider from './AuthContext/AuthContext'
 
 const App = () => {
+  const queryClient = new QueryClient()
+
   return (
+    <QueryClientProvider client={queryClient}>
     <AuthProvider>
       <div className=' bg-slate-900 min-h-screen text-white flex flex-col'>
         <div className='container mx-auto flex flex-col flex-1'>
@@ -27,6 +31,7 @@ const App = () => {
         </div>
       </div>
     </AuthProvider>
+    </QueryClientProvider>
   )
 }
 
