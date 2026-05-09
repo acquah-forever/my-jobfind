@@ -25,7 +25,7 @@ const LogIn = () => {
 
   return (
     <div>
-      <header id='login' className='px-10 mt-30'>
+      <header id='login' className='px-10 mt-50'>
         <div className='p-10 border rounded-2xl max-w-md w-full mx-auto'>
           <div className='grid grid-cols-1'>
             <div className='mb-5 space-y-1'>

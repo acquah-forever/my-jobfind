@@ -3,9 +3,12 @@ import React, { useState, createContext } from 'react'
 export const AuthContext = createContext()
 
 export default function AuthProvider({ children }) {
+    
+    const currentUserEmail = localStorage.getItem("currentUserEmail")
 
-    const [user, setUser] = useState(localStorage.getItem("currentUserEmail") ?
-        { email: localStorage.getItem("currentUserEmail") } : null)
+    const [user, setUser] = useState(currentUserEmail ?
+        {email : currentUserEmail} : null
+    )
 
     function signUp(email, password) {
         const users = JSON.parse(localStorage.getItem("users") || "[]")

@@ -29,7 +29,7 @@ const NavBar = () => {
           <Link to='./' className='text-xl md:text-2xl'>Logo</Link>
         </div>
 
-        <div className='text-lg md:text-xl hidden md:flex space-x-3'>
+        <div className='text-md md:text-lg hidden md:flex space-x-3'>
           <Link to='./'>Home</Link>
           <Link>Jobs</Link>
           <Link>About</Link>
@@ -43,11 +43,11 @@ const NavBar = () => {
         {user ? (<button className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' onClick={logOut}>LogOut</button>) : (
 
           <div className='hidden md:flex justify-center items-center space-x-3'>
-            <div className=' text-lg md:text-xl'>
+            <div className=' text-md md:text-lg'>
               <NavLink to='./signup'>Sign Up</NavLink>
             </div>
 
-            <div className='bg-linear-to-br text-black from-emerald-400 font-semibold to-green-400 rounded-xl border px-4 py-2 text-lg md:text-xl'>
+            <div className='bg-linear-to-br text-black from-emerald-400 font-semibold to-green-400 rounded-xl border px-4 py-2 text-md md:text-lg'>
               <NavLink to='./login'>Log In</NavLink>
             </div>
           </div>
