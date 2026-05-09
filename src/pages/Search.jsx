@@ -36,8 +36,9 @@ const Search = () => {
             const filteredJobs = jobs.filter((item) =>
                 item.title.toLowerCase().includes(query.toLowerCase()) ||
                 item.company.toLowerCase().includes(query.toLocaleLowerCase()) ||
-                item.location.toLowerCase().includes(query.toLocaleLowerCase()) || 
-                item.employmentType.toLocaleLowerCase().includes(query.toLowerCase()) ||
+                item.location.toLowerCase().includes(query.toLocaleLowerCase()) ||
+                item.employmentType.toLowerCase().includes(query.toLowerCase()) ||
+                item.skills.some(skill => skill.toLocaleLowerCase().includes(query.toLowerCase())) ||
                 item.salary.toLowerCase().includes(query.toLowerCase()))
 
             setResults(filteredJobs)
@@ -61,19 +62,26 @@ const Search = () => {
 
             {isError && <p>Something Went Wrong</p>}
 
+
             {results?.length === 0 && !isLoading && query.trim() !== "" ?
 
                 (<p className='mt-7'>No Job Listing Available</p>) :
 
                 (results.map((result) =>
-                    <div key={result.id} className='mt-7 p-3 max-w-3xl w-full flex flex-col justify-start border'>
-                        <div className='flex space-x-4 items-center'>
-                            <h1 className='text-xl font-semibold text-emerald-300'>{result.title}</h1>
-                            <p className='text-sm font-semibold'>{result.employmentType}</p>
+                    <div key={result.id} className='mt-7 p-3 max-w-4xl w-full flex flex-col justify-start border'>
+                        <div className='flex justify-between'>
+                            <div className='flex space-x-4  items-center'>
+                                <h1 className='text-xl font-semibold text-emerald-300'>{result.title}</h1>
+                                <p className='text-sm font-semibold mt-1'>{result.employmentType}</p>
+                            </div>
+                            <div className='text-sm font-semibold mt-1 flex flex-wrap gap-2'>{result.skills.map((skill, index) =>
+                                <span key={index}>{skill}</span>
+
+                            )}</div>
                         </div>
-                        <h2>{result.company}</h2>
-                        <h2>{result.location}</h2>
-                        <p>{result.salary}</p>
+                        <h2 className='text-sm'>{result.company}</h2>
+                        <h2 className='text-sm'>{result.location}</h2>
+                        <p className='text-sm font-bold'>{result.salary}</p>
                     </div>
                 ))}
 
