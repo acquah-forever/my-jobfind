@@ -37,7 +37,7 @@ const Faq = () => {
 
                 {open === 1 && (
                     <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
-                        <motion.p variants={children}>New positions arrive daily from companies actively hiring. Werefresh listings every morning so
+                        <motion.p variants={children}>New positions arrive daily from companies actively hiring. W erefresh listings regularly so
                             you never miss an opportunity. The best jobs move fast, and we make sure you see them first.
                         </motion.p>
                     </motion.div>
@@ -56,7 +56,7 @@ const Faq = () => {
                 {open === 2 && (
                     <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
                         <motion.p variants={children}>Yes. Filter by remote, on-site or specific cities. You can also combine location with the role type and
-                            experience level. Our search understand what you want and shows only what matches.
+                            experience level. Our search understands what you want and shows only what matches.
                         </motion.p>
                     </motion.div>
                 )}
@@ -107,7 +107,7 @@ const Faq = () => {
 
                 {open === 5 && (
                     <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
-                        <motion.p variants={children}>Not yet, but its coming soon. For now, check back daily or use our search to find roles matching your
+                        <motion.p variants={children}>Not yet, but it is coming soon. For now, check back daily or use our search to find roles matching your
                             criteria. New listings arrive consistently.
                         </motion.p>
                     </motion.div>
@@ -115,8 +115,8 @@ const Faq = () => {
             </motion.div>
 
             <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }} className='mt-10 space-y-3 text-center'>
-                <motion.h1 variants={children} className='text-3xl font-semibold'>Need more Help ?</motion.h1>
-                <motion.p variants={children} className='text-xl font-semibold'>Reach out to us directly with your questions</motion.p>
+                <motion.h1 variants={children} className='text-3xl font-semibold'>Need more Help?</motion.h1>
+                <motion.p variants={children} className='text-xl font-semibold'>Reach out to us directly with your questions.</motion.p>
                 <motion.div variants={children} whileHover={{ scale:1.08 }} whileTap={{ scale: 0.8 }}  transition={{type:spring, stiffness: 120, damping: 7 }} className='mt-7'>
                     <button  className='cursor-pointer bg-linear-to-br  from-emerald-400  to-sky-400 p-4 text-black rounded-md'>Contact</button>
                 </motion.div>

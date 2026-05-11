@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import React, { useState, useMemo, useEffect } from 'react'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
+import { Link } from 'react-router-dom'
 
 async function getJobs() {
-    const res = await fetch("http://localhost:3000/jobs")
+    const res = await fetch('http://localhost:3000/jobs')
     if (!res.ok) {
         throw new Error("NetWork Issues")
     }
@@ -12,80 +13,116 @@ async function getJobs() {
 const Search = () => {
 
     const [query, setQuery] = useState("")
-    const [results, setResults] = useState([])
+    const [page, setPage] = useState(1)
 
-    const { data: jobs, isLoading, isError } = useQuery({
+    const jobsPerPage = 5
+
+    const { data: jobs, isLoading, isError, isPlaceholderData } = useQuery({
 
         queryKey: ["jobs"],
-        queryFn: getJobs
+        queryFn: getJobs,
+        placeholderData: keepPreviousData
     })
 
     function handleChange(e) {
         setQuery(e.target.value)
     }
 
+    function handlePrevious() {
+        setPage((prev) => Math.max(prev - 1, 1))
+    }
+
+    function handleNext() {
+        setPage((prev) => Math.min(prev + 1, totalPages))
+    }
+
+    // for searching job in other pages. query typed will
+    // search from page 1
     useEffect(() => {
+        setPage(1)
+    }, [query])
 
-        const debounce = setTimeout(() => {
 
-            if (query.trim() === "") {
-                setResults([])
-                return
-            }
+    // filter jobs
+    const filteredJobs = useMemo(() => {
 
-            const filteredJobs = jobs.filter((item) =>
-                item.title.toLowerCase().includes(query.toLowerCase()) ||
-                item.company.toLowerCase().includes(query.toLocaleLowerCase()) ||
-                item.location.toLowerCase().includes(query.toLocaleLowerCase()) ||
-                item.employmentType.toLowerCase().includes(query.toLowerCase()) ||
-                item.skills.some(skill => skill.toLocaleLowerCase().includes(query.toLowerCase())) ||
-                item.salary.toLowerCase().includes(query.toLowerCase()))
+        if (!jobs) return []
 
-            setResults(filteredJobs)
-        })
+        if (query.trim() === "") return jobs
 
-        return () => clearTimeout(debounce)
-    }, [query, jobs])
+        return jobs?.filter((item) =>
+            item.title.toLowerCase().includes(query.toLowerCase()) ||
+            item.company.toLowerCase().includes(query.toLowerCase()) ||
+            item.location.toLowerCase().includes(query.toLowerCase()) ||
+            item.employmentType.toLowerCase().includes(query.toLowerCase()) ||
+            item.salary.toLowerCase().includes(query.toLowerCase())
+
+        ) || []
+    }, [jobs, query])
+
+    // Pagination calculations
+    const totalPages = Math.ceil(filteredJobs.length / jobsPerPage)
+
+    const startIndex = (page - 1) * jobsPerPage
+    const endIndex = startIndex + jobsPerPage
+
+    const paginatedJobs = filteredJobs.slice(startIndex, endIndex)
+
+    // keeps the current page valid when the number of pages changes.
+    useEffect(() => {
+        setPage((p) => Math.min(p, totalPages || 1))
+    }, [totalPages])
 
     return (
-        <section className=' grid grid-cols-1 justify-items-center px-7'>
-            <div className='mb-7'>
-                <button className='flex justify-center items-center space-x-1 border px-5 py-2 rounded-full bg-emerald-300/25'>
-                    <div className='rounded-full border-5 border-emerald-300'></div>
-                    <p className='text-emerald-300 text-sm font-semibold'>2000+ jobs available</p></button>
-            </div>
+        <main className='flex flex-row justify-between items-center'>
+            <section className=' grid grid-cols-1 px-7'>
+                <div className='max-w-4xl w-full'>
+                    <div className='mb-7 flex justify-center'>
+                        <button className='flex justify-center items-center space-x-1 border px-5 py-2 rounded-full bg-emerald-300/25'>
+                            <div className='rounded-full border-5 border-emerald-300'></div>
+                            <p className='text-emerald-300 text-sm font-semibold'>2000+ jobs available</p></button>
+                    </div>
 
-            <input className='max-w-4xl w-full p-2 border rounded focus:border-0 focus:ring focus:outline-0 focus:ring-green-500' type="search" placeholder='Search for Job...'
-                value={query} onChange={handleChange} />
+                    <input className='max-w-sm w-full p-2 border rounded focus:border-0 focus:ring focus:outline-0 focus:ring-green-500' type="search" placeholder='Search for Job...'
+                        value={query} onChange={handleChange} />
+                </div>
 
-            {isLoading && <p>Loading</p>}
+                {isLoading && <p>Loading</p>}
 
-            {isError && <p>Something Went Wrong</p>}
+                {isError && <p>Something went wrong.</p>}
 
 
-            {results?.length === 0 && !isLoading && query.trim() !== "" ?
+                {paginatedJobs?.length === 0 && !isLoading && query.trim() !== "" ?
 
-                (<p className='mt-7'>No Job Listing Available</p>) :
+                    (<p className='mt-7'>No Job Listing Available</p>) :
 
-                (results.map((result) =>
-                    <div key={result.id} className='mt-7 p-3 max-w-4xl w-full flex flex-col justify-start border'>
-                        <div className='flex justify-between'>
-                            <div className='flex space-x-4  items-center'>
+                    (paginatedJobs.map((result) =>
+                        <Link key={result.id}
+                            className='mt-7 bg-slate-800 p-4 max-w-lg w-full flex flex-col justify-start  rounded-xl transition-all duration-200 hover:scale-105 hover:bg-slate-700/80'>
+
+                            <div className='flex justify-between items-center'>
                                 <h1 className='text-xl font-semibold text-emerald-300'>{result.title}</h1>
                                 <p className='text-sm font-semibold mt-1'>{result.employmentType}</p>
                             </div>
-                            <div className='text-sm font-semibold mt-1 flex flex-wrap gap-2'>{result.skills.map((skill, index) =>
-                                <span key={index}>{skill}</span>
 
-                            )}</div>
-                        </div>
-                        <h2 className='text-sm'>{result.company}</h2>
-                        <h2 className='text-sm'>{result.location}</h2>
-                        <p className='text-sm font-bold'>{result.salary}</p>
-                    </div>
-                ))}
+                            <h2 className='text-sm'>{result.company}</h2>
+                            <h2 className='text-sm'>{result.location}</h2>
+                            <p className='text-sm font-bold'>{result.salary}</p>
+                        </Link>
+                    ))}
 
-        </section>
+                <div className='flex flex-row space-x-3 mt-4'>
+                    <button type='button' className='px-5 py-2 rounded-lg cursor-pointer bg-slate-700 transition-all duration-200 hover:scale-105 hover:bg-slate-700/80' onClick={handlePrevious} disabled={page === 1}>Previous Page</button>
+                    <button type='button' className='px-5 py-2 rounded-lg cursor-pointer bg-slate-700 transition-all duration-200 hover:scale-105 hover:bg-slate-700/80' onClick={handleNext} disabled={page >= totalPages}>Next Page</button>
+                </div>
+
+            </section>
+
+
+
+
+        </main>
+
     )
 }
 
