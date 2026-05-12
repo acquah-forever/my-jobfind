@@ -26,27 +26,27 @@ const JobDetails = () => {
             navigate('/')
         }
 
-   
-    },[jobs, isLoading, navigate])
 
-    if (isLoading) {
-        return <p>Loading...</p>
-    }
+    }, [jobs, isLoading, navigate])
 
-    if (isError) {
-        return <p>{error.message}</p>
-    }
+    { isLoading && <p>Loading...</p> }
 
+    { isError && <p>{error.message}</p> }
 
 
     return (
-        <div>
-            <h1>{jobs.title}</h1>
-            <p>{jobs.company}</p>
-            <p>{jobs.location}</p>
-            <p>{jobs.salary}</p>
-           
-        </div>
+        <section className='flex flex-col justify-center items-center'>
+            <div className=' max-w-3xl w-full'>
+                <div className='mb-10'>
+                    <img className='w-full h-50 rounded-2xl' src={"https://cdn.pixabay.com/photo/2022/05/12/03/19/binary-code-7190628_1280.jpg"} alt="image" />
+                </div>
+                <h1 className='text-3xl font-semibold'>{jobs.title}</h1>
+                <p>{jobs.company}</p>
+                <p>{jobs.location}</p>
+                <p>{jobs.salary}</p>
+
+            </div>
+        </section>
     )
 }
 
