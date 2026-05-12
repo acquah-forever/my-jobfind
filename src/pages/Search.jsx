@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 async function getJobs() {
     const res = await fetch('http://localhost:3000/jobs')
     if (!res.ok) {
-        throw new Error("NetWork Issues")
+        throw new Error("Network Issues")
     }
     return res.json()
 }
@@ -21,6 +21,7 @@ const Search = () => {
 
         queryKey: ["jobs"],
         queryFn: getJobs,
+        staleTime: 1000 * 6,
         placeholderData: keepPreviousData
     })
 
@@ -74,8 +75,8 @@ const Search = () => {
     }, [totalPages])
 
     return (
-        <main className='flex flex-row justify-between items-center'>
-            <section className=' grid grid-cols-1 px-7'>
+        <main className='flex flex-row justify-center items-center'>
+            <section className='max-w-6xl w-full grid grid-cols-1 justify-items-center px-7'>
                 <div className='max-w-4xl w-full'>
                     <div className='mb-7 flex justify-center'>
                         <button className='flex justify-center items-center space-x-1 border px-5 py-2 rounded-full bg-emerald-300/25'>
@@ -83,7 +84,7 @@ const Search = () => {
                             <p className='text-emerald-300 text-sm font-semibold'>2000+ jobs available</p></button>
                     </div>
 
-                    <input className='max-w-sm w-full p-2 border rounded focus:border-0 focus:ring focus:outline-0 focus:ring-green-500' type="search" placeholder='Search for Job...'
+                    <input className='max-w-5xl w-full p-2 border rounded focus:border-0 focus:ring focus:outline-0 focus:ring-green-500' type="search" placeholder='Search for Job...'
                         value={query} onChange={handleChange} />
                 </div>
 
@@ -97,8 +98,8 @@ const Search = () => {
                     (<p className='mt-7'>No Job Listing Available</p>) :
 
                     (paginatedJobs.map((result) =>
-                        <Link key={result.id}
-                            className='mt-7 bg-slate-800 p-4 max-w-lg w-full flex flex-col justify-start  rounded-xl transition-all duration-200 hover:scale-105 hover:bg-slate-700/80'>
+                        <Link to={`/jobdetails/${result.id}`} key={result.id}
+                            className='mt-7 bg-slate-800 p-4 max-w-5xl w-full flex flex-col justify-start  rounded-xl transition-all duration-200 hover:scale-105 hover:bg-slate-700/80'>
 
                             <div className='flex justify-between items-center'>
                                 <h1 className='text-xl font-semibold text-emerald-300'>{result.title}</h1>

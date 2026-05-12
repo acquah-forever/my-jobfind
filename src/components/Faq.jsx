@@ -37,7 +37,7 @@ const Faq = () => {
 
                 {open === 1 && (
                     <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
-                        <motion.p variants={children}>New positions arrive daily from companies actively hiring. W erefresh listings regularly so
+                        <motion.p variants={children}>New positions arrive daily from companies actively hiring. We refresh listings regularly so
                             you never miss an opportunity. The best jobs move fast, and we make sure you see them first.
                         </motion.p>
                     </motion.div>
