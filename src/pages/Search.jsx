@@ -17,7 +17,7 @@ const Search = () => {
 
     const jobsPerPage = 5
 
-    const { data: jobs, isLoading, isError, isPlaceholderData } = useQuery({
+    const { data: jobs, isLoading, isError, error, isPlaceholderData } = useQuery({
 
         queryKey: ["jobs"],
         queryFn: getJobs,
@@ -90,7 +90,7 @@ const Search = () => {
 
                 {isLoading && <p>Loading</p>}
 
-                {isError && <p>Something went wrong.</p>}
+                {isError && <p>{error.message}</p>}
 
 
                 {paginatedJobs?.length === 0 && !isLoading && query.trim() !== "" ?

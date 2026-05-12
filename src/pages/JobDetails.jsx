@@ -21,14 +21,12 @@ const JobDetails = () => {
         staleTime: 1000 * 6,
     })
 
-    // jobs is undefined during loading and user would be redirected
-    // to home page without isLoading
     useEffect(() => {
         if (!isLoading && !jobs) {
             navigate('/')
         }
 
-        // id is nt part of dependency because id is not used in useEffect
+   
     },[jobs, isLoading, navigate])
 
     if (isLoading) {
