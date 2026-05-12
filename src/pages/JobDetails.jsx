@@ -47,8 +47,7 @@ const JobDetails = () => {
             <p>{jobs.company}</p>
             <p>{jobs.location}</p>
             <p>{jobs.salary}</p>
-
-
+           
         </div>
     )
 }
