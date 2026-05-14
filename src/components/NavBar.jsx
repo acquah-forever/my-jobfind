@@ -31,8 +31,7 @@ const NavBar = () => {
 
         <div className='text-md md:text-lg hidden md:flex space-x-3'>
           <Link to='./'>Home</Link>
-          <Link>Jobs</Link>
-          <Link>About</Link>
+          <Link smooth to='/search'>Jobs</Link>
 
           <button className='cursor-pointer flex justify-center items-center'
             onClick={toggle}>
@@ -77,7 +76,7 @@ const NavBar = () => {
                 <div className='mt-2 flex space-x-4'>
                   <TableOfContents size={20} />
                   <motion.div variants={children} whileHover={{ scale: 1.05 }}>
-                    <Link className='text-sm font-semibold underline' onClick={close}>FAQ</Link>
+                    <Link to='/#faq' className='text-sm font-semibold underline' onClick={close}>FAQ</Link>
                     <h2 className='text-sm'>Common Questions Asked.</h2>
                   </motion.div>
                 </div>
@@ -147,11 +146,10 @@ const NavBar = () => {
       <AnimatePresence>
         {
           isOpen && (
-            <motion.div variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -50 }} >
+            <motion.div variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -50 }} className='fixed w-full top-10 pr-8 backdrop-blur-lg mt-4' >
               <motion.div variants={children} className='mt-7 mb-4 flex flex-col md:hidden text-lg md:text-xl space-y-2'>
                 <Link onClick={close2}>Home</Link>
                 <Link onClick={close2}>Jobs</Link>
-                <Link onClick={close2}>About</Link>
                 <Link onClick={close2}>Contact</Link>
               </motion.div>
               <motion.div variants={children} className='text-center flex flex-col md:hidden space-y-2 w-full'>

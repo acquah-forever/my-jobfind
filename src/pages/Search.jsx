@@ -47,16 +47,18 @@ const Search = () => {
     // filter jobs
     const filteredJobs = useMemo(() => {
 
+        const lowerCase = query.toLowerCase()
+
         if (!jobs) return []
 
         if (query.trim() === "") return jobs
 
         return jobs?.filter((item) =>
-            item.title.toLowerCase().includes(query.toLowerCase()) ||
-            item.company.toLowerCase().includes(query.toLowerCase()) ||
-            item.location.toLowerCase().includes(query.toLowerCase()) ||
-            item.employmentType.toLowerCase().includes(query.toLowerCase()) ||
-            item.salary.toLowerCase().includes(query.toLowerCase())
+            item.title.toLowerCase().includes(lowerCase) ||
+            item.company.toLowerCase().includes(lowerCase) ||
+            item.location.toLowerCase().includes(lowerCase) ||
+            item.employmentType.toLowerCase().includes(lowerCase) ||
+            item.salary.toLowerCase().includes(lowerCase)
 
         ) || []
     }, [jobs, query])
@@ -75,7 +77,7 @@ const Search = () => {
     }, [totalPages])
 
     return (
-        <main className='flex flex-row justify-center items-center'>
+        <main id='seerch' className='flex flex-row justify-center items-center'>
             <section className='max-w-6xl w-full grid grid-cols-1 justify-items-center px-7'>
                 <div className='max-w-4xl w-full'>
                     <div className='mb-7 flex justify-center'>
@@ -113,8 +115,8 @@ const Search = () => {
                     ))}
 
                 <div className='flex flex-row space-x-3 mt-4'>
-                    <button type='button' className='px-5 py-2 rounded-lg cursor-pointer bg-slate-700 transition-all duration-200 hover:scale-105 hover:bg-slate-700/80' onClick={handlePrevious} disabled={page === 1}>Previous Page</button>
-                    <button type='button' className='px-5 py-2 rounded-lg cursor-pointer bg-slate-700 transition-all duration-200 hover:scale-105 hover:bg-slate-700/80' onClick={handleNext} disabled={page >= totalPages}>Next Page</button>
+                    <button type='button' className={`px-5 py-2 rounded-lg cursor-pointer ${page === 1 ? "bg-gray-400" : "bg-slate-700"}  transition-all duration-200 hover:scale-105`} onClick={handlePrevious} disabled={page === 1}>Previous Page</button>
+                    <button type='button' className={`px-5 py-2 rounded-lg cursor-pointer ${page >= totalPages ? "bg-gray-400" : "bg-slate-700"  } transition-all duration-200 hover:scale-105`} onClick={handleNext} disabled={page >= totalPages}>Next Page</button>
                 </div>
 
             </section>

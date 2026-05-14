@@ -70,7 +70,6 @@ const SignUp = () => {
             <div className='text-center mt-7'>
               <h1>Already have an account? &nbsp;<NavLink to='/login' className='cursor-pointer text-sky-500 font-semibold underline'>Log In</NavLink></h1>
             </div>
-
           </form>
         </div>
       </div>

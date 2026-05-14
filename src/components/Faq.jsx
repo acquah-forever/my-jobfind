@@ -21,7 +21,7 @@ const Faq = () => {
         setOpen((prev) => (prev === index ? null : index))
     }
     return (
-        <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }} className='min-h-screen flex flex-col items-center'>
+        <motion.section id='faq' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }} className='min-h-screen flex flex-col items-center'>
             <div className='space-y-4 text-center mb-20'>
                 <motion.h1 variants={children} className='text-4xl font-bold'>FAQ</motion.h1>
                 <motion.p variants={children} className='text-2xl font-semibold'>Questions about how TechJob Finder works and what we offer.</motion.p>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { span } from 'motion/react-client'
+
 
 async function findJob(id) {
     const res = await fetch(`http://localhost:3000/jobs/${id}`)
@@ -21,15 +21,14 @@ const JobDetails = () => {
         staleTime: 1000 * 6,
     })
 
-    useEffect(() => {
-        if (!isLoading && !jobs) {
-            navigate('/')
-        }
-    }, [jobs, isLoading, navigate])
-
     if (isLoading) return <p>Loading...</p>
+
     if (isError) return <p>Error: {error.message}</p>
-    if (!jobs) return <p>Job not found</p>
+
+    if (!jobs) return (<div className='min-h-screen flex flex-col justify-center items-center'>
+        <p>Job Not Found</p>
+        <button className='mt-4 px-4 py-2 bg-emerald-500 rounded' onClick={() => navigate('/')}>Return to Home</button>
+    </div>)
 
     return (
         <section className='min-h-screen flex flex-col justify-center items-center px-7'>
@@ -40,7 +39,7 @@ const JobDetails = () => {
                 <main className='border-2 p-5 rounded-2xl space-y-2'>
 
                     <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between'>
-                        <h1 className=' text-2xl text-center sm:text-sta font-semibold bg-linear-to-tr from-emerald-400  to-sky-600 text-transparent bg-clip-text'>{jobs.title}</h1>
+                        <h1 className=' text-2xl text-center sm:text-start font-semibold bg-linear-to-tr from-emerald-400  to-sky-600 text-transparent bg-clip-text'>{jobs.title}</h1>
                         <h1 className='flex flex-row justify-center sm:justify-start space-x-1 sm:space-x-1.5 mt-1'>{jobs.skills.map((item, index) =>
                             <span key={index} className='text-sm font-semibold'>{item}</span>
                         )}</h1>
@@ -72,7 +71,7 @@ const JobDetails = () => {
                     )}</p>
 
                     <h1 className='underline font-semibold text-lg'>Salary</h1>
-                    <p className='text-2xl text-cyan-400'>{jobs.salary} <span className='text-white text-lg'>per negotiations</span></p>
+                    <p className='text-2xl text-cyan-400'>{jobs.salary} <span className='text-white text-sm sm:text-lg'>per negotiations</span></p>
 
                     <button className='mt-4 bg-linear-to-br from-green-400 to-green-700 p-3 w-full'>Apply</button>
                 </main>

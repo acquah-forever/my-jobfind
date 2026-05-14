@@ -29,7 +29,7 @@ const Home = () => {
     <div>
       <Hero />
 
-      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.7 }}>
+      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
         <motion.h1 variants={children} className='font-bold  text-3xl sm:text-4xl text-center mb-7'>What makes us different</motion.h1>
         <motion.h1 variants={children} className='font-semibold text-center text-xl sm:text-2xl'>We built the platform to cut through the noise and get you hired</motion.h1>
       </motion.div>
@@ -40,7 +40,7 @@ const Home = () => {
         />))}
       </div>
 
-      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.7 }}>
+      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
         <motion.h1 variants={children} className='font-bold  text-3xl sm:text-4xl text-center mb-7'>Stay Ahead in Tech</motion.h1>
         <motion.h1 variants={children} className='font-semibold text-center text-xl sm:text-2xl'>Read what matters most to engineers building their careers.</motion.h1>
       </motion.div>
@@ -51,7 +51,7 @@ const Home = () => {
         />))}
       </div>
 
-      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.7 }}>
+      <motion.div className='px-2' variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.7 }}>
         <motion.h1 variants={children} className='font-bold  text-3xl sm:text-4xl text-center mb-7'>Real Stories</motion.h1>
         <motion.h1 variants={children} className='font-semibold text-center text-xl sm:text-2xl'>Engineers who found their next role here</motion.h1>
       </motion.div>
