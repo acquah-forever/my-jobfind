@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams,NavLink } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 
 
@@ -73,7 +73,9 @@ const JobDetails = () => {
                     <h1 className='underline font-semibold text-lg'>Salary</h1>
                     <p className='text-2xl text-cyan-400'>{jobs.salary} <span className='text-white text-sm sm:text-lg'>per negotiations</span></p>
 
-                    <button className='mt-4 bg-linear-to-br from-green-400 to-green-700 p-3 w-full'>Apply</button>
+                    <div className='flex flex-col sm:flex-row sm:justify-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3'>
+                    <NavLink className='mt-7 bg-linear-to-br from-green-400 to-green-700 p-3 w-full text-center rounded' to='/form'>Apply</NavLink>
+                    </div>
                 </main>
             </div>
         </section>
