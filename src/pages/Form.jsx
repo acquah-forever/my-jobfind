@@ -42,7 +42,7 @@ const Form = () => {
                     </div>
                     {errors.email && <p className='text-red-400 text-sm mb-4'>{errors.email.message}</p>}
                     <div className='mb-4'>
-                        <label className='block text-sm font-semibold mb-2' htmlFor='resume'>Resume</label>
+                        <label className='block text-sm font-semibold mb-2' htmlFor='resume'>Resumes</label>
                         <input className='cursor-pointer w-full p-2 border border-gray-300 rounded' type='file' id='resume'
                             {...register('resume', { required: "Upload your resume" })} />
                     </div>
