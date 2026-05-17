@@ -74,7 +74,7 @@ const JobDetails = () => {
                     <p className='text-2xl text-cyan-400'>{jobs.salary} <span className='text-white text-sm sm:text-lg'>per negotiations</span></p>
 
                     <div className='flex flex-col sm:flex-row sm:justify-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3'>
-                    <NavLink className='mt-7 bg-linear-to-br from-green-400 to-green-700 p-3 w-full text-center rounded' to='/form'>Apply</NavLink>
+                    <NavLink className='mt-7 bg-linear-to-br from-green-400 to-green-700 p-3 w-full text-center rounded' to='/form' state={{ id:id}}>Apply</NavLink>
                     </div>
                 </main>
             </div>

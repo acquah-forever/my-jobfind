@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react'
-import { keepPreviousData, useQuery } from '@tanstack/react-query'
-import { Link } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
+import { NavLink } from 'react-router-dom'
 
 async function getJobs() {
     const res = await fetch('http://localhost:3000/jobs')
@@ -17,12 +17,11 @@ const Search = () => {
 
     const jobsPerPage = 5
 
-    const { data: jobs, isLoading, isError, error, isPlaceholderData } = useQuery({
+    const { data: jobs, isLoading, isError, error } = useQuery({
 
         queryKey: ["jobs"],
         queryFn: getJobs,
-        staleTime: 1000 * 6,
-        placeholderData: keepPreviousData
+        staleTime: 1000 * 6
     })
 
     function handleChange(e) {
@@ -100,7 +99,7 @@ const Search = () => {
                     (<p className='mt-7'>No Job Listing Available</p>) :
 
                     (paginatedJobs.map((result) =>
-                        <Link to={`/jobdetails/${result.id}`} key={result.id}
+                        <NavLink to={`/jobdetails/${result.id}`} key={result.id}
                             className='mt-7 bg-slate-800 p-4 max-w-5xl w-full flex flex-col justify-start  rounded-xl transition-all duration-200 hover:scale-105 hover:bg-slate-700/80'>
 
                             <div className='flex justify-between items-center'>
@@ -111,7 +110,7 @@ const Search = () => {
                             <h2 className='text-sm'>{result.company}</h2>
                             <h2 className='text-sm'>{result.location}</h2>
                             <p className='text-sm font-bold'>{result.salary}</p>
-                        </Link>
+                        </NavLink>
                     ))}
 
                 <div className='flex flex-row space-x-3 mt-4'>
