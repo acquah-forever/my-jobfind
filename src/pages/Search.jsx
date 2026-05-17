@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react'
+import ClipLoader from "react-spinners/ClipLoader";
 import { useQuery } from '@tanstack/react-query'
 import { NavLink } from 'react-router-dom'
 
@@ -89,7 +90,9 @@ const Search = () => {
                         value={query} onChange={handleChange} />
                 </div>
 
-                {isLoading && <p>Loading</p>}
+                {isLoading &&  <div>
+                    <ClipLoader color="#36d7b7" />
+                </div>}
 
                 {isError && <p>{error.message}</p>}
 
