@@ -99,7 +99,7 @@ const NavBar = () => {
                     <h1 className='text-sm font-semibold'>Finding Your Next Role</h1>
                     <h2 className='text-sm'>Tips for landing positions.</h2>
                     <motion.div variants={children} whileHover={{ scale: 1.05 }}>
-                      <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
+                      <NavLink to='/blogpost' className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const NavBar = () => {
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
                     <h2 className='text-sm'>What companies are hiring.</h2>
                     <motion.div variants={children} whileHover={{ scale: 1.05 }}>
-                      <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
+                      <NavLink to='/blogpost' className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
                 </div>
