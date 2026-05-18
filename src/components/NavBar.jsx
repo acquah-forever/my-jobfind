@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { ChevronDown, House, TableOfContents, Handshake, Image, Menu, X } from 'lucide-react'
-import { motion, AnimatePresence, scale } from 'motion/react'
+import { ChevronDown, House, TableOfContents, Handshake,  Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'motion/react'
 import { AuthContext } from '../AuthContext/AuthContext'
 
 import useClick from '../hooks/useClick'
@@ -25,15 +25,15 @@ const NavBar = () => {
   return (
     <header className='py-5 mx-5'>
       <nav className='flex justify-between items-center'>
-        <div>
+        <motion.div variants={children} whileHover={{ scale: 1.15 }}>
           <Link to='./' className='text-xl md:text-2xl'>Logo</Link>
-        </div>
+        </motion.div>
 
-        <div className='text-md md:text-lg hidden md:flex space-x-3'>
-          <Link to='./'>Home</Link>
-          <Link smooth to='/search'>Jobs</Link>
+        <div className='text-md md:text-lg hidden md:flex space-x-5'>
+          <Link className='transition-all hover:scale-125 hover:underline duration-300' to='./'>Home</Link>
+          <Link className='transition-all hover:scale-125 hover:underline duration-300' smooth to='/search'>Jobs</Link>
 
-          <button className='cursor-pointer flex justify-center items-center'
+          <button className='cursor-pointer flex justify-center items-center transition-all hover:scale-125 hover:underline duration-300'
             onClick={toggle}>
             More <ChevronDown className='mt-1' size={18} /></button>
 
@@ -42,11 +42,11 @@ const NavBar = () => {
         {user ? (<button className='bg-slate-800 border px-4 py-2 text-lg md:text-xl' onClick={logOut}>LogOut</button>) : (
 
           <div className='hidden md:flex justify-center items-center space-x-3'>
-            <div className=' text-md md:text-lg'>
+            <div className=' text-md md:text-lg transition-all hover:scale-105 bg-linear-to-br text-white from-sky-600 to-slate-800 rounded-xl border px-4 py-2'>
               <NavLink to='./signup'>Sign Up</NavLink>
             </div>
 
-            <div className='bg-linear-to-br text-black from-emerald-400 font-semibold to-green-400 rounded-xl border px-4 py-2 text-md md:text-lg'>
+            <div className='bg-linear-to-br text-black from-emerald-400 font-semibold to-green-400 rounded-xl border px-4 py-2 text-md md:text-lg transition-all hover:scale-105'>
               <NavLink to='./login'>Log In</NavLink>
             </div>
           </div>
@@ -93,27 +93,25 @@ const NavBar = () => {
               <motion.div variants={children} className='space-y-4'>
                 <label className='text-md font-bold tracking-tighter' htmlFor="insights">Latest Insights</label>
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='p-10 w-50 bg-gray-400 rounded-xl'>
-                    <Image size={40} />
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='p-10 w-50 rounded-xl bg-[url("https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_1280.jpg")] bg-cover bg-center bg-no-repeat'>
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Finding Your Next Role</h1>
                     <h2 className='text-sm'>Tips for landing positions.</h2>
                     <motion.div variants={children} whileHover={{ scale: 1.05 }}>
-                      <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
+                      <NavLink to='/blogpost' className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
                 </div>
 
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl'>
-                    <Image size={40} />
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl bg-[url("https://cdn.pixabay.com/photo/2023/12/15/11/13/programming-8450423_1280.png")] bg-cover bg-center bg-no-repeat'>
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
                     <h2 className='text-sm'>What companies are hiring.</h2>
                     <motion.div variants={children} whileHover={{ scale: 1.05 }}>
-                      <NavLink className='text-sm underline' onClick={close}>Read More</NavLink>
+                      <NavLink to='/jobpost' className='text-sm underline' onClick={close}>Read More</NavLink>
                     </motion.div>
                   </div>
                 </div>
