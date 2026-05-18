@@ -105,8 +105,7 @@ const NavBar = () => {
                 </div>
 
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl'>
-                    
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl bg-[url("https://cdn.pixabay.com/photo/2023/12/15/11/13/programming-8450423_1280.png")] bg-cover bg-center bg-no-repeat'>
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
