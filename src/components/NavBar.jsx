@@ -25,15 +25,15 @@ const NavBar = () => {
   return (
     <header className='py-5 mx-5'>
       <nav className='flex justify-between items-center'>
-        <div>
+        <motion.div variants={children} whileHover={{ scale: 1.15 }}>
           <Link to='./' className='text-xl md:text-2xl'>Logo</Link>
-        </div>
+        </motion.div>
 
-        <div className='text-md md:text-lg hidden md:flex space-x-3'>
-          <Link to='./'>Home</Link>
-          <Link smooth to='/search'>Jobs</Link>
+        <div className='text-md md:text-lg hidden md:flex space-x-5'>
+          <Link className='transition-all hover:scale-125 ' to='./'>Home</Link>
+          <Link className='transition-all hover:scale-125 ' smooth to='/search'>Jobs</Link>
 
-          <button className='cursor-pointer flex justify-center items-center'
+          <button className='cursor-pointer flex justify-center items-center transition-all hover:scale-125 '
             onClick={toggle}>
             More <ChevronDown className='mt-1' size={18} /></button>
 
