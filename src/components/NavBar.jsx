@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { ChevronDown, House, TableOfContents, Handshake, Image, Menu, X } from 'lucide-react'
-import { motion, AnimatePresence, scale } from 'motion/react'
+import { ChevronDown, House, TableOfContents, Handshake,  Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'motion/react'
 import { AuthContext } from '../AuthContext/AuthContext'
 
 import useClick from '../hooks/useClick'
@@ -93,8 +93,7 @@ const NavBar = () => {
               <motion.div variants={children} className='space-y-4'>
                 <label className='text-md font-bold tracking-tighter' htmlFor="insights">Latest Insights</label>
                 <div className='mt-3 flex space-x-3'>
-                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='p-10 w-50 bg-gray-400 rounded-xl'>
-                    <Image size={40} />
+                  <motion.div variants={children} whileHover={{ scale: 1.05 }} className='p-10 w-50 rounded-xl bg-[url("https://cdn.pixabay.com/photo/2019/07/14/16/27/pen-4337521_1280.jpg")] bg-cover bg-center bg-no-repeat'>
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Finding Your Next Role</h1>
@@ -107,7 +106,7 @@ const NavBar = () => {
 
                 <div className='mt-3 flex space-x-3'>
                   <motion.div variants={children} whileHover={{ scale: 1.05 }} className='w-50 p-10 bg-gray-400 rounded-xl'>
-                    <Image size={40} />
+                    
                   </motion.div>
                   <div>
                     <h1 className='text-sm font-semibold'>Remote Work Trends</h1>
